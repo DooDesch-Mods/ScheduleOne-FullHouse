@@ -1,0 +1,12 @@
+{
+  "name": "FullHouse",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/DooDesch-Mods/ScheduleOne-FullHouse",
+  "description": "Bigger co-op lobbies for Schedule I - raise the 4-player cap (32 by default, configurable). Standalone, no other lobby mod needed.",
+  "dependencies": [
+    "LavaGang-MelonLoader-0.7.3"
+  ],
+  "contributors": [
+    "DooDesch"
+  ]
+}
