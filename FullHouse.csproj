@@ -20,7 +20,7 @@
     <Nullable>disable</Nullable>
     <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>
-    <RootNamespace>DooDesch.Lobbies</RootNamespace>
+    <RootNamespace>DooDesch.FullHouse</RootNamespace>
     <AssemblyName>FullHouse</AssemblyName>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Version>1.0.0</Version>
