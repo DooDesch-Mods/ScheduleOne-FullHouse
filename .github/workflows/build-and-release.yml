@@ -4,12 +4,12 @@ name: Build and Release on Tag
 # Release, and uploads to Thunderstore + Nexus. Mirrors the TightBeam/Siesta pipeline.
 #
 # One-time setup:
-#   - Private build-libs repo  ${owner}/ScheduleOne-Workspace  must contain:
-#       fullhouse/FullHouse.cs (the shared engine SOURCE - FullHouse.dll is compiled from it)
-#       lib/il2cpp/game        (game managed DLLs FullHouse references: Assembly-CSharp, Il2Cppmscorlib,
-#                               Il2CppSystem, UnityEngine.CoreModule, UnityEngine.UI, UnityEngine.UIModule,
-#                               Unity.TextMeshPro, UnityEngine.TextRenderingModule,
-#                               Il2Cppcom.rlabrecque.steamworks.net)
+#   - Public shared-source repo  ${owner}/ScheduleOne-Stash  provides fullhouse/FullHouse.cs (the engine
+#     SOURCE that FullHouse.dll is compiled from). No token needed - it is public.
+#   - Private build-libs repo  ${owner}/ScheduleOne-Workspace  provides the game managed DLLs:
+#       lib/il2cpp/game        (Assembly-CSharp, Il2Cppmscorlib, Il2CppSystem, UnityEngine.CoreModule,
+#                               UnityEngine.UI, UnityEngine.UIModule, Unity.TextMeshPro,
+#                               UnityEngine.TextRenderingModule, Il2Cppcom.rlabrecque.steamworks.net)
 #       lib/il2cpp/melonloader (MelonLoader, 0Harmony, Il2CppInterop.Runtime)
 #     FullHouse does not use S1API, so no lib/il2cpp/s1api is needed.
 #   - Secrets: WORKSPACE_TOKEN (SSH deploy key for that repo), THUNDERSTORE_TOKEN, NEXUSMODS_API_KEY.
@@ -39,7 +39,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout Workspace repository (build libs + shared engine source)
+      - name: Checkout Stash repository (shared engine source, public)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/ScheduleOne-Stash
+          path: Stash
+
+      - name: Checkout Workspace repository (private build libs)
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/ScheduleOne-Workspace

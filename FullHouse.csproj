@@ -2,10 +2,13 @@
 
   <!--
     FullHouse - a single-file, self-contained "raise the co-op lobby cap" mod for Schedule I
-    (MelonLoader, IL2CPP). The engine lives in Workspace/fullhouse/FullHouse.cs (shared, linked below);
-    this project compiles it standalone with FULLHOUSE_STANDALONE defined, which turns on the MelonMod
-    entry point. Other DooDesch mods (SideHustle) embed the SAME file via Workspace/build/FullHouse.props
+    (MelonLoader, IL2CPP). The engine lives in the public Stash repo (Stash/fullhouse/FullHouse.cs, shared,
+    linked below); this project compiles it standalone with FULLHOUSE_STANDALONE defined, which turns on the
+    MelonMod entry point. Other DooDesch mods (SideHustle) embed the SAME file via Stash/build/FullHouse.props
     to get native bigger lobbies with no dependency on this DLL.
+
+    Building: needs the Stash repo checked out as a sibling, plus the game/MelonLoader managed DLLs (set
+    WorkspaceLibPath, or run Stash/tools/copy-game-libs.ps1 to fill ../Stash/lib). See the Stash README.
 
     IL2CPP only (net6.0). Patches the game's Lobby / LobbyInterface and Steamworks lobby member limit;
     no S1API, no FishNet.
@@ -26,17 +29,28 @@
     <NoWarn>$(NoWarn);MSB3277;MSB3245</NoWarn>
     <DefineConstants>$(DefineConstants);IL2CPP;FULLHOUSE_STANDALONE</DefineConstants>
 
-    <WorkspaceLibPath Condition="'$(WorkspaceLibPath)' == ''">$(MSBuildThisFileDirectory)../Workspace/lib</WorkspaceLibPath>
+    <!-- The maintainer builds against the private Workspace lib; a contributor runs Stash/tools/copy-game-libs.ps1
+         and gets ../Stash/lib. Prefer Workspace when present, else fall back to Stash. Override with -p:WorkspaceLibPath=... -->
+    <WorkspaceLibPath Condition="'$(WorkspaceLibPath)' == '' and Exists('$(MSBuildThisFileDirectory)../Workspace/lib')">$(MSBuildThisFileDirectory)../Workspace/lib</WorkspaceLibPath>
+    <WorkspaceLibPath Condition="'$(WorkspaceLibPath)' == ''">$(MSBuildThisFileDirectory)../Stash/lib</WorkspaceLibPath>
     <GameManagedPath>$(WorkspaceLibPath)/il2cpp/game</GameManagedPath>
     <MelonLoaderPath>$(WorkspaceLibPath)/il2cpp/melonloader</MelonLoaderPath>
     <ModsDirectory Condition="'$(ModsDirectory)' == ''">D:\Launcher\SteamLibrary\steamapps\common\Schedule I\Mods</ModsDirectory>
   </PropertyGroup>
 
-  <!-- The engine is a single shared source file (also linked into SideHustle via Workspace/build/FullHouse.props).
-       Local: Workspace is a sibling (../Workspace). CI checks it out as a subfolder (./Workspace). Include whichever exists. -->
+  <!-- CI checks out the Stash (shared source) and the private Workspace (game libs) as SUBFOLDERS, so the SDK's
+       default **/*.cs glob would sweep them in. Remove those sweeps, then include ONLY the engine explicitly below.
+       No-op locally, where both are sibling folders. -->
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)../Workspace/fullhouse/FullHouse.cs" Link="FullHouse.cs" Condition="Exists('$(MSBuildThisFileDirectory)../Workspace/fullhouse/FullHouse.cs')" />
-    <Compile Include="$(MSBuildThisFileDirectory)Workspace/fullhouse/FullHouse.cs" Link="FullHouse.cs" Condition="Exists('$(MSBuildThisFileDirectory)Workspace/fullhouse/FullHouse.cs')" />
+    <Compile Remove="Stash/**/*.cs" />
+    <Compile Remove="Workspace/**/*.cs" />
+  </ItemGroup>
+
+  <!-- The engine is a single shared source file from the public Stash repo (also linked into SideHustle via
+       Stash/build/FullHouse.props). Local: Stash is a sibling (../Stash). CI checks it out as a subfolder (./Stash). -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../Stash/fullhouse/FullHouse.cs" Link="FullHouse.cs" Condition="Exists('$(MSBuildThisFileDirectory)../Stash/fullhouse/FullHouse.cs')" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stash/fullhouse/FullHouse.cs" Link="FullHouse.cs" Condition="Exists('$(MSBuildThisFileDirectory)Stash/fullhouse/FullHouse.cs')" />
   </ItemGroup>
 
   <ItemGroup>
