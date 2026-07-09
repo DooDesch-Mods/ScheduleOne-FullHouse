@@ -21,6 +21,8 @@
   limit, the game's internal player list, the invite gate and the lobby UI slots.
 - **Plays nice with others.** If you already run another cap mod, FullHouse cooperates instead of fighting -
   the highest cap wins, and it never double-patches or lowers anyone's limit.
+- **Clients follow the host.** A joining player automatically adopts the host's lobby size (read from the
+  Steam lobby, no extra networking), so mismatched capacity settings still seat everyone the host admits.
 - **Light-touch.** It patches only the lobby layer (Steam lobby + the game's own `Lobby`/`LobbyInterface`);
   it does not touch FishNet, saves, or gameplay.
 

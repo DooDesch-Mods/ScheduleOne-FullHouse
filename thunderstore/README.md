@@ -18,6 +18,8 @@
   the lobby UI. No other lobby mod required.
 - **Plays nice with others.** If you run another cap mod too, FullHouse cooperates - the highest cap wins and
   nothing double-patches.
+- **Clients follow the host.** A joining player automatically adopts the host's lobby size, so mismatched
+  capacity settings still seat everyone.
 - **Light-touch.** Only the lobby layer is touched; no FishNet, saves or gameplay changes.
 
 ## Requirements
