@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <!-- Shared release hardening: strip Release debug info + assembly identity, cuts AV false positives (see Workspace/build/Hardening.props). -->
+  <Import Project="$(MSBuildThisFileDirectory)../Workspace/build/Hardening.props" Condition="Exists('$(MSBuildThisFileDirectory)../Workspace/build/Hardening.props')" />
+  <Import Project="$(MSBuildThisFileDirectory)Workspace/build/Hardening.props" Condition="Exists('$(MSBuildThisFileDirectory)Workspace/build/Hardening.props')" />
+
   <!--
     FullHouse - a single-file, self-contained "raise the co-op lobby cap" mod for Schedule I
     (MelonLoader, IL2CPP). The engine lives in the public Stash repo (Stash/fullhouse/FullHouse.cs, shared,
