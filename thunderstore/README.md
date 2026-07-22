@@ -1,6 +1,6 @@
 # FullHouse - Bigger Co-op Lobbies for Schedule I
 
-> 🛟 **Need help or found a bug?** Get support at [support.doodesch.de](https://support.doodesch.de).
+> 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/fullhouse](https://support.doodesch.de/fullhouse).
 
 > **Bigger co-op lobbies.** Vanilla caps you at 4 players - FullHouse raises the cap (32 by default) so more
 > friends can join the same game. Drop it in, host, and fill the lobby. Works on its own, no other lobby mod
