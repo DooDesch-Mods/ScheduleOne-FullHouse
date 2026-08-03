@@ -20,7 +20,8 @@
   nothing double-patches.
 - **Clients follow the host.** A joining player automatically adopts the host's lobby size, so mismatched
   capacity settings still seat everyone.
-- **Light-touch.** Only the lobby layer is touched; no FishNet, saves or gameplay changes.
+- **Light-touch.** The lobby layer plus the network transport's client limit, so the extra seats can be
+  connected into and not just occupied. Saves and gameplay are left alone.
 
 ## Requirements
 

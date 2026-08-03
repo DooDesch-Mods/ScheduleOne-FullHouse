@@ -9,7 +9,8 @@ name: Build and Release on Tag
 #   - Private build-libs repo  ${owner}/ScheduleOne-Workspace  provides the game managed DLLs:
 #       lib/il2cpp/game        (Assembly-CSharp, Il2Cppmscorlib, Il2CppSystem, UnityEngine.CoreModule,
 #                               UnityEngine.UI, UnityEngine.UIModule, Unity.TextMeshPro,
-#                               UnityEngine.TextRenderingModule, Il2Cppcom.rlabrecque.steamworks.net)
+#                               UnityEngine.TextRenderingModule, Il2Cppcom.rlabrecque.steamworks.net,
+#                               Il2CppFishNet.Runtime)
 #       lib/il2cpp/melonloader (MelonLoader, 0Harmony, Il2CppInterop.Runtime)
 #     FullHouse does not use S1API, so no lib/il2cpp/s1api is needed.
 #   - Secrets: WORKSPACE_TOKEN (SSH deploy key for that repo), THUNDERSTORE_TOKEN, NEXUSMODS_API_KEY.
