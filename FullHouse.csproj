@@ -14,8 +14,9 @@
     Building: needs the Stash repo checked out as a sibling, plus the game/MelonLoader managed DLLs (set
     WorkspaceLibPath, or run Stash/tools/copy-game-libs.ps1 to fill ../Stash/lib). See the Stash README.
 
-    IL2CPP only (net6.0). Patches the game's Lobby / LobbyInterface and Steamworks lobby member limit;
-    no S1API, no FishNet.
+    IL2CPP only (net6.0). Patches the game's Lobby / LobbyInterface and the Steamworks lobby member limit,
+    and raises the FishNet transport's own client limit (referenced for that, not for networking of its own).
+    No S1API.
   -->
 
   <PropertyGroup>
@@ -27,9 +28,9 @@
     <RootNamespace>DooDesch.FullHouse</RootNamespace>
     <AssemblyName>FullHouse</AssemblyName>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
     <NoWarn>$(NoWarn);MSB3277;MSB3245</NoWarn>
     <DefineConstants>$(DefineConstants);IL2CPP;FULLHOUSE_STANDALONE</DefineConstants>
 
@@ -105,6 +106,12 @@
     <!-- Steamworks.NET (IL2CPP): lobby member limit, lobby data, member/owner queries, SteamManager. -->
     <Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
       <HintPath>$(GameManagedPath)/Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- FishNet: the network transport derives from its Transport base, needed to reach the transport's
+         own client limit (raising the lobby's seats alone is not enough). -->
+    <Reference Include="Il2CppFishNet.Runtime">
+      <HintPath>$(GameManagedPath)/Il2CppFishNet.Runtime.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

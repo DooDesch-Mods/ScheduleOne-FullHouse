@@ -3,6 +3,15 @@
 All notable changes to FullHouse are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-08-03
+
+### Fixed
+
+- The raised cap now holds past five players. Seats beyond that could be occupied but not connected
+  into: the fifth client and everyone after them hung on "Loading world..." forever. Growing the lobby
+  was only ever half of it, because the game's network transport enforces a client limit of its own,
+  and that one stayed at the vanilla value.
+
 ## [1.0.0] - 2026-07-09
 
 Initial release.
