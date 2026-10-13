@@ -13,6 +13,7 @@
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3+-green)
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
 [![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
+[![MLVScan FullHouse.dll](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk/badge.svg)](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk)
 
 ## Features
 
