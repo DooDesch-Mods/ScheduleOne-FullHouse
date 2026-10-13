@@ -12,6 +12,7 @@
 ![Game](https://img.shields.io/badge/game-Schedule%20I-purple)
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3+-green)
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
+[![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
 
 ## Features
 
