@@ -9,6 +9,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Game](https://img.shields.io/badge/game-Schedule%20I-purple)
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3+-green)
+[![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
 
 [![MLVScan FullHouse.dll](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk/badge.svg)](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk)
 
