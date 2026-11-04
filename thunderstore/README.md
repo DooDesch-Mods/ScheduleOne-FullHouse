@@ -2,8 +2,6 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/fullhouse](https://support.doodesch.de/fullhouse).
 
-[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
-
 > **Bigger co-op lobbies.** Vanilla caps you at 4 players - FullHouse raises the cap (32 by default) so more
 > friends can join the same game. Drop it in, host, and fill the lobby. Works on its own, no other lobby mod
 > needed.
@@ -11,7 +9,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Game](https://img.shields.io/badge/game-Schedule%20I-purple)
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3+-green)
-[![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de) [![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
 
 [![MLVScan FullHouse.dll](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk/badge.svg)](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk)
 
