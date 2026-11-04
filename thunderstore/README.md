@@ -2,6 +2,8 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/fullhouse](https://support.doodesch.de/fullhouse).
 
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
+
 > **Bigger co-op lobbies.** Vanilla caps you at 4 players - FullHouse raises the cap (32 by default) so more
 > friends can join the same game. Drop it in, host, and fill the lobby. Works on its own, no other lobby mod
 > needed.
@@ -35,6 +37,12 @@
 
 `Capacity` (default `32`, range 2-250) in `UserData/MelonPreferences.cfg` under `[FullHouse]`. The game was
 built for small lobbies, so counts well above 32 can get unstable - start modest.
+
+## Community
+
+[![DooDesch Mods on Discord](https://mods.doodesch.de/img/card.svg)](https://mods.doodesch.de)
+
+Join the DooDesch Mods Discord: update pings, polls on what comes next, and playtests of new mods.
 
 ## License
 

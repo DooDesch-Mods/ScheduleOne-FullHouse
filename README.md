@@ -2,6 +2,8 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/fullhouse](https://support.doodesch.de/fullhouse).
 
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
+
 📖 **Documentation:** [docs.doodesch.de/mods/fullhouse/](https://docs.doodesch.de/mods/fullhouse/)
 
 > Vanilla Schedule I caps co-op at 4 players. FullHouse raises that cap so more friends can join the same
@@ -94,6 +96,12 @@ without anyone keeping two copies in sync.
 
 To build it yourself, check Stash out next to this repo (`../Stash`) - the project file picks it up from
 there, and the release workflow does the same with a checkout subfolder.
+
+## Community
+
+[![DooDesch Mods on Discord](https://mods.doodesch.de/img/card.svg)](https://mods.doodesch.de)
+
+Join the DooDesch Mods Discord: update pings, polls on what comes next, and playtests of new mods.
 
 ## Credits
 
