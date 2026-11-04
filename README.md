@@ -2,8 +2,6 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/fullhouse](https://support.doodesch.de/fullhouse).
 
-[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
-
 📖 **Documentation:** [docs.doodesch.de/mods/fullhouse/](https://docs.doodesch.de/mods/fullhouse/)
 
 > Vanilla Schedule I caps co-op at 4 players. FullHouse raises that cap so more friends can join the same
@@ -14,7 +12,7 @@
 ![Game](https://img.shields.io/badge/game-Schedule%20I-purple)
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3+-green)
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
-[![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de) [![Polyfill](https://polyfill.doomods.com/badge/fullhouse.svg)](https://polyfill.doomods.com/mod/fullhouse)
 
 [![MLVScan FullHouse.dll](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk/badge.svg)](https://mlvscan.com/attestations/att_xkvyxfDJ_TN7-1i4gNIyIoAk)
 
